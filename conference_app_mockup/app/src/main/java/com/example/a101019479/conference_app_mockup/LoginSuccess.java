@@ -8,7 +8,7 @@ import android.widget.Button;
 import android.net.Uri;
 
 
-public class LoginSuccess extends AppCompatActivity {
+public class LoginSuccess extends AppMenuCompatActivity {
     private Button allSchedule;
     private Button mySchedule;
     private Button speakers;

@@ -7,8 +7,15 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 
 
-public class Menu extends AppCompatActivity {
+public class AppMenuCompatActivity extends AppCompatActivity {
 
+    private final Uri TWITTER_URI;
+    private final Uri GEO_URI;
+
+    public AppMenuCompatActivity() {
+        TWITTER_URI = Uri.parse("https://twitter.com/GBCollege?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor");
+        GEO_URI = Uri.parse("geo:0,0?q=george+brown+campus");
+    }
 
     @Override
     public boolean onCreateOptionsMenu(android.view.Menu menu) {
@@ -16,7 +23,6 @@ public class Menu extends AppCompatActivity {
         inflater.inflate(R.menu.main_menu, menu);
         return true;
     }
-
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
@@ -34,13 +40,13 @@ public class Menu extends AppCompatActivity {
                 startActivity(new Intent(this, Attendees.class));
                 return true;
             case R.id.mLocations:
-                startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("geo:0,0?q=george+brown+campus")));
+                startActivity(new Intent(Intent.ACTION_VIEW, GEO_URI));
                 return true;
             case R.id.mSponsors:
                 startActivity(new Intent(this, Sponsors.class));
                 return true;
             case R.id.mTwitter:
-                startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://twitter.com/GBCollege?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor")));
+                startActivity(new Intent(Intent.ACTION_VIEW, TWITTER_URI));
                 return true;
             case R.id.mLogOut:
                 startActivity(new Intent(this, MainActivity.class));
