@@ -10,33 +10,25 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".MainActivity"
+            android:name=".activity.RegisterActivity"
             android:launchMode="singleInstance">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <activity
-            android:name=".LoginSuccess"
+            android:name=".activity.LoginSuccess"
             android:launchMode="singleInstance" />
         <activity
-            android:name=".AllSchedule"
+            android:name=".activity.SurveyActivity"
             android:launchMode="singleInstance" />
         <activity
-            android:name=".MySchedule"
+            android:name=".activity.PresentersActivity"
             android:launchMode="singleInstance" />
-        <activity
-            android:name=".Speakers"
-            android:launchMode="singleInstance" />
-        <activity
-            android:name=".Attendees"
-            android:launchMode="singleInstance" />
-        <activity
-            android:name=".Sponsors"
-            android:launchMode="singleInstance" />
-        <activity android:name=".Navigation"></activity>
+        <activity android:name=".Navigation" />
+        <activity android:name=".activity.DetailViewActivity"
+            android:launchMode="singleInstance"/>
     </application>
 
 </manifest>

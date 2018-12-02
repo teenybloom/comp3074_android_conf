@@ -3,20 +3,11 @@
     xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
-        android:id="@+id/mAllSchedule"
-        android:title="Sign Up for Event" />
-    <item
-        android:id="@+id/mMySchedule"
-        android:title="MySchedule" />
+        android:id="@+id/mSurvey"
+        android:title="Take a Survey" />
     <item
         android:id="@+id/mSpeakers"
-        android:title="Speakers" />
-    <item
-        android:id="@+id/mAttendees"
-        android:title="Attendees" />
-    <item
-        android:id="@+id/mSponsors"
-        android:title="Sponsors" />
+        android:title="Presenters" />
     <item
         android:id="@+id/mLocations"
         android:title="Locations" />
@@ -25,5 +16,5 @@
         android:title="Twitter" />
     <item
         android:id="@+id/mLogOut"
-        android:title="Log Out" />
+        android:title="Return to Main Screen" />
 </menu>

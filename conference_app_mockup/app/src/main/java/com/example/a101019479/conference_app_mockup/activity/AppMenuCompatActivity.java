@@ -1,10 +1,12 @@
-package com.example.a101019479.conference_app_mockup;
+package com.example.a101019479.conference_app_mockup.activity;
 
 import android.content.Intent;
 import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+
+import com.example.a101019479.conference_app_mockup.R;
 
 
 public class AppMenuCompatActivity extends AppCompatActivity {
@@ -27,29 +29,20 @@ public class AppMenuCompatActivity extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()){
-            case R.id.mAllSchedule:
-                startActivity(new Intent(this, AllSchedule.class));
-                return true;
-            case R.id.mMySchedule:
-                startActivity(new Intent(this, MySchedule.class));
+            case R.id.mSurvey:
+                startActivity(new Intent(this, SurveyActivity.class));
                 return true;
             case R.id.mSpeakers:
-                startActivity(new Intent(this, Speakers.class));
-                return true;
-            case R.id.mAttendees:
-                startActivity(new Intent(this, Attendees.class));
+                startActivity(new Intent(this, PresentersActivity.class));
                 return true;
             case R.id.mLocations:
                 startActivity(new Intent(Intent.ACTION_VIEW, GEO_URI));
-                return true;
-            case R.id.mSponsors:
-                startActivity(new Intent(this, Sponsors.class));
                 return true;
             case R.id.mTwitter:
                 startActivity(new Intent(Intent.ACTION_VIEW, TWITTER_URI));
                 return true;
             case R.id.mLogOut:
-                startActivity(new Intent(this, MainActivity.class));
+                startActivity(new Intent(this, RegisterActivity.class));
                 return true;
             default:
                 super.onOptionsItemSelected(item);

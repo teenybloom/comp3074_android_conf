@@ -1,11 +1,12 @@
-package com.example.a101019479.conference_app_mockup;
+package com.example.a101019479.conference_app_mockup.activity;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.net.Uri;
+
+import com.example.a101019479.conference_app_mockup.R;
 
 
 public class LoginSuccess extends AppMenuCompatActivity {
@@ -25,22 +26,16 @@ public class LoginSuccess extends AppMenuCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login_success);
 
-        allSchedule = (Button)findViewById(R.id.btnAllSchedule);
-        mySchedule = (Button)findViewById(R.id.btnMySchedule);
+        allSchedule = (Button)findViewById(R.id.btnSurvey);
         speakers = (Button)findViewById(R.id.btnSpeakers);
-        attendees = (Button)findViewById(R.id.btnAttendees);
         locations = (Button)findViewById(R.id.btnLocations);
-        sponsors = (Button)findViewById(R.id.btnSponsors);
         twitter = (Button)findViewById(R.id.btnTwitter);
         logOut = (Button)findViewById(R.id.btnLogOut);
 
         toLogOut();
         toAllSchedule();
-        toMySchedule();
         toSpeakers();
-        toAttendees();
         toLocations();
-        toSponsors();
         toTwitter();
 
     }
@@ -57,16 +52,7 @@ public class LoginSuccess extends AppMenuCompatActivity {
         allSchedule.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(view.getContext(), AllSchedule.class);
-                startActivity(intent);
-            }
-        });
-    }
-    private void toMySchedule(){
-        mySchedule.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(view.getContext(), MySchedule.class);
+                Intent intent = new Intent(view.getContext(), SurveyActivity.class);
                 startActivity(intent);
             }
         });
@@ -75,16 +61,7 @@ public class LoginSuccess extends AppMenuCompatActivity {
         speakers.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(view.getContext(), Speakers.class);
-                startActivity(intent);
-            }
-        });
-    }
-    private void toAttendees(){
-        attendees.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(view.getContext(), Attendees.class);
+                Intent intent = new Intent(view.getContext(), PresentersActivity.class);
                 startActivity(intent);
             }
         });
@@ -95,16 +72,6 @@ public class LoginSuccess extends AppMenuCompatActivity {
             public void onClick(View view) {
                 Intent webIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("geo:0,0?q=george+brown+campus"));
                 startActivity(webIntent);
-            }
-        });
-
-    }
-    private void toSponsors(){
-        sponsors.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(view.getContext(), Sponsors.class);
-                startActivity(intent);
             }
         });
 

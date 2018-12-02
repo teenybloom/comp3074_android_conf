@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".LoginSuccess">
+    tools:context=".activity.LoginSuccess">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -20,22 +20,14 @@
             android:orientation="horizontal">
 
             <Button
-                android:id="@+id/btnAllSchedule"
+                android:id="@+id/btnSurvey"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_margin="4dp"
                 android:layout_weight="1"
-                android:text="Sign Up\n For Event"
+                android:text="Take a Survey"
                 android:textSize="18sp" />
 
-            <Button
-                android:id="@+id/btnMySchedule"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_margin="4dp"
-                android:layout_weight="1"
-                android:text="My \nSchedule"
-                android:textSize="18sp" />
         </LinearLayout>
 
         <LinearLayout
@@ -53,14 +45,6 @@
                 android:text="Speakers"
                 android:textSize="18sp" />
 
-            <Button
-                android:id="@+id/btnAttendees"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_margin="4dp"
-                android:layout_weight="1"
-                android:text="Attendees"
-                android:textSize="18sp" />
         </LinearLayout>
 
         <LinearLayout
@@ -78,14 +62,6 @@
                 android:text="Locations"
                 android:textSize="18sp" />
 
-            <Button
-                android:id="@+id/btnSponsors"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_margin="4dp"
-                android:layout_weight="1"
-                android:text="Sponsors"
-                android:textSize="18sp" />
         </LinearLayout>
 
         <LinearLayout
@@ -109,7 +85,7 @@
                 android:layout_height="match_parent"
                 android:layout_margin="4dp"
                 android:layout_weight="1"
-                android:text="Log Out"
+                android:text="Return to Main"
                 android:textSize="18sp" />
         </LinearLayout>
     </LinearLayout>
