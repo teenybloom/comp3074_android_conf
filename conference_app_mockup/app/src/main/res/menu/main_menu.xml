@@ -15,6 +15,9 @@
         android:id="@+id/mTwitter"
         android:title="Twitter" />
     <item
+        android:id="@+id/mSensor"
+        android:title="Sensor" />
+    <item
         android:id="@+id/mLogOut"
         android:title="Return to Main Screen" />
 </menu>

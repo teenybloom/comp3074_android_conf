@@ -44,6 +44,9 @@ public class AppMenuCompatActivity extends AppCompatActivity {
             case R.id.mLogOut:
                 startActivity(new Intent(this, RegisterActivity.class));
                 return true;
+            case R.id.mSensor:
+                startActivity(new Intent(this, SensorActivity.class));
+                return true;
             default:
                 super.onOptionsItemSelected(item);
 

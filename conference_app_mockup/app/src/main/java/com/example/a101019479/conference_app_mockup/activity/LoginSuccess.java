@@ -11,13 +11,11 @@ import com.example.a101019479.conference_app_mockup.R;
 
 public class LoginSuccess extends AppMenuCompatActivity {
     private Button allSchedule;
-    private Button mySchedule;
     private Button speakers;
-    private Button attendees;
     private Button locations;
-    private Button sponsors;
     private Button twitter;
     private Button logOut;
+    private Button sensor;
 
 
 
@@ -31,12 +29,16 @@ public class LoginSuccess extends AppMenuCompatActivity {
         locations = (Button)findViewById(R.id.btnLocations);
         twitter = (Button)findViewById(R.id.btnTwitter);
         logOut = (Button)findViewById(R.id.btnLogOut);
+        sensor = (Button)findViewById(R.id.btnSensor);
+
 
         toLogOut();
         toAllSchedule();
         toSpeakers();
         toLocations();
         toTwitter();
+        toSensor();
+
 
     }
 
@@ -81,6 +83,16 @@ public class LoginSuccess extends AppMenuCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent webIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://twitter.com/GBCollege?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"));
+                startActivity(webIntent);
+            }
+        });
+
+    }
+    private void toSensor(){
+        sensor.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent webIntent = new Intent(view.getContext(), SensorActivity.class);
                 startActivity(webIntent);
             }
         });

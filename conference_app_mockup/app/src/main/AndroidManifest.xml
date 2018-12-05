@@ -14,6 +14,7 @@
             android:launchMode="singleInstance">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
@@ -27,7 +28,12 @@
             android:name=".activity.PresentersActivity"
             android:launchMode="singleInstance" />
         <activity android:name=".Navigation" />
-        <activity android:name=".activity.DetailViewActivity"
+        <activity
+            android:name=".activity.DetailViewActivity"
+            android:launchMode="singleInstance" />
+        <activity
+            android:name=".activity.SensorActivity"
+            android:label="@string/title_activity_sensor"
             android:launchMode="singleInstance"/>
     </application>
 
